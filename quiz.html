@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #e3f2fd;
+        }
+
+        header, footer {
+            background: #0277bd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            background: white;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            margin: 5px 0;
+        }
+
+        button {
+            background: #0277bd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Simple Quiz App</h1>
+</header>
+
+<div class="quiz-container">
+    <form>
+        <p>1. HTML stands for?</p>
+        <input type="radio" name="q1"> Hyper Text Markup Language<br>
+        <input type="radio" name="q1"> High Text Machine Language<br>
+
+        <p>2. Which tag is used for headings?</p>
+        <input type="radio" name="q2"> &lt;p&gt;<br>
+        <input type="radio" name="q2"> &lt;h1&gt;<br>
+
+        <p>3. HTML is used for?</p>
+        <input type="radio" name="q3"> Styling<br>
+        <input type="radio" name="q3"> Structure<br>
+
+        <button>Submit Quiz</button>
+    </form>
+</div>
+
+<footer>
+    &copy; 2025 Abanikant Das
+</footer>
+
+</body>
+</html>

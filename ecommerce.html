@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abanikant's Online Store</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #333;
+    }
+
+    /* Navbar */
+    nav {
+        background: #1565c0;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 25px;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+        background: #0d47a1;
+        transform: scale(1.05);
+    }
+
+    /* Header */
+    header {
+        background: #1976d2;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    /* Category Bar */
+    .categories {
+        max-width: 1000px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .categories button {
+        background: #e3f2fd;
+        color: #1565c0;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .categories button:hover {
+        background: #bbdefb;
+        transform: scale(1.05);
+    }
+
+    .shop {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px; /* Make cards taller */
+    padding: 20px;
+}
+
+.product img {
+    width: 80%;
+    height: 150px;       /* Adjust image size smaller */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    color: #1565c0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product button {
+    background: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.product button:hover {
+    background: #ff5722;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;        /* fixed height for uniform cards *//* use 'cover' if you want full crop */
+}
+    /* Footer */
+    footer {
+        text-align: center;
+        background: #1565c0;
+        color: white;
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        color: #ffcc80;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+
+    footer a:hover {
+        color: #fff;
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .categories {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <a href="resume.html" target="_blank">Resume</a>
+    <a href="quiz.html" target="_blank">Quiz</a>
+    <a href="pizza.html" target="_blank">Pizza Shop</a>
+    <a href="ecommerce.html" target="_blank" class="active">E-Commerce</a>
+</nav>
+
+<!-- Header -->
+<header>
+    <h1>Abanikant's Online Store 🛒</h1>
+    <p>High-quality products at unbeatable prices!</p>
+</header>
+
+<!-- Categories -->
+<div class="categories">
+    <button>All</button>
+    <button>Electronics</button>
+    <button>Accessories</button>
+    <button>Gadgets</button>
+</div>
+
+<!-- Products -->
+<div class="shop">
+    <div class="product">
+        <img src="watch.webp" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>₹1999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="headphones.webp" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>₹1499</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="phone.webp" alt="Mobile Phone">
+        <h3>Mobile Phone</h3>
+        <p>₹9999</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="speaker.webp" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p>₹899</p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Abanikant Das</p>
+    <p>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="#">Contact</a>
+    </p>
+</footer>
+
+</body>
+</html>

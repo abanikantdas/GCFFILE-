@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abanikant | Pizza Shop</title>
+
+  <!-- Internal CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #fff7f0;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #c0392b;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: #fff;
+      font-size: 26px;
+      animation: slideIn 1.2s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f1c40f;
+      transform: scale(1.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1601924582975-7aa3f8b4f52b') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 15px 35px;
+      border: none;
+      background-color: #f1c40f;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      transform: translateY(-5px);
+    }
+
+    /* Menu Section */
+    .menu {
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #c0392b;
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      padding: 10px 20px;
+      border: none;
+      background-color: #e67e22;
+      color: #fff;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #e74c3c;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #c0392b;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Pizza</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Fresh & Hot Pizza</h2>
+    <p>Delicious pizzas made with love and fresh ingredients</p>
+    <button>Order Now</button>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3" alt="Margherita Pizza">
+        <h3>Margherita</h3>
+        <p>Classic cheese and tomato pizza</p>
+        <p class="price">$8.99</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="peproni.jpeg" alt="Pepperoni Pizza">
+        <h3>Pepperoni</h3>
+        <p>Loaded with spicy pepperoni</p>
+        <p class="price">$10.99</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65" alt="Veggie Pizza">
+        <h3>Veggie Delight</h3>
+        <p>Fresh vegetables and mozzarella</p>
+        <p class="price">$9.99</p>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Slice Heaven Pizza Shop | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
